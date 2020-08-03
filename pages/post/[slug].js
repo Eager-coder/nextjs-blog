@@ -48,16 +48,16 @@ const Post = ({ postData }) => {
 							<a className='share-vk' href={`https://vk.com/share.php?url=http://localhost:3000/${route.asPath}`} target='_blank'>
 								<i className='fab fa-vk'></i>
 							</a>
-							<FacebookShareButton url={`http://localhost:3000/${route.asPath}`}>Hefew</FacebookShareButton>
-							<VKShareButton url={`http://localhost:3000/${route.asPath}`}>Sharevk</VKShareButton>
-							<TwitterShareButton url={`http://localhost:3000/${route.asPath}`}>Tweet</TwitterShareButton>
+							<FacebookShareButton url={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}>Hefew</FacebookShareButton>
+							<VKShareButton url={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}>Sharevk</VKShareButton>
+							<TwitterShareButton url={`https://nextjs-blog-eta-nine.vercel.app/${route.asPath}`}>Tweet</TwitterShareButton>
 						</div>
 					</section>
 					<section className='comments'>
 						<h4 className='comment-title'>Leave a comment</h4>
 						<div className='comments-container'>
 							<FacebookProvider appId='749408989149871'>
-								<Comments width='100%' href={'https://edupro.netlify.app/post/how-i-learned-handstand1'} />
+								<Comments width='100%' href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} />
 							</FacebookProvider>
 						</div>
 					</section>
