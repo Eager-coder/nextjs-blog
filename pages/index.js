@@ -3,12 +3,24 @@ import Prismic from 'prismic-javascript'
 import FrontLink from '../components/FrontLink'
 import Layout from '../components/Layout'
 import ArticleLink from '../components/ArticleLink'
+import Head from 'next/head'
 import '../styles/css/Home.css'
 const Home = ({ results, links }) => {
-	console.log(results)
-
 	return (
 		<Layout>
+			<Head>
+				<title>EduPro</title>
+				<meta name='description' content='Education Progress - quality of education that you deserve	' />
+				<meta name='twitter:card' value='summary' />
+				<meta property='og:title' content='Education Progress' />
+				<meta property='og:type' content='website' />
+				<meta property='og:url' content='https://nextjs-blog-eta-nine.vercel.app/' />
+				<meta
+					property='og:image'
+					content='https://images.prismic.io/gatsby-and-prismic-website/47149ecf-207c-4b2f-b411-ef55afe803e0_man.webp?auto=compress,format&amp;rect=0,0,600,400&amp;w=1500&amp;h=1000'
+				/>
+				<meta property='og:description' content='Education Progress - quality of education that you deserve' />
+			</Head>
 			<div className='home-container'>
 				<section className='front-grid'>
 					<FrontLink link={links.leftLink} className='front-left' />

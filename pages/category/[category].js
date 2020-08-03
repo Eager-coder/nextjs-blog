@@ -1,14 +1,17 @@
-import Link from 'next/link'
 import Client from '../../prismicClient'
 import Prismic from 'prismic-javascript'
-import moment from 'moment'
 import ArticleLink from '../../components/ArticleLink'
 import '../../styles/css/Category.css'
 import Layout from '../../components/Layout'
+import Head from 'next/head'
 function Category({ posts, category }) {
-	console.log(posts)
 	return (
 		<Layout>
+			<Head>
+				<title>{category | EduPro}</title>
+				<meta property='og:url' content={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} />
+				<meta property='og:type' content='website' />
+			</Head>
 			<section className='category'>
 				<h1>Category: {category}</h1>
 				<div className='category-container'>
@@ -25,9 +28,7 @@ export default Category
 
 export async function getServerSideProps({ query }) {
 	const { results } = await Client.query(Prismic.Predicates.at('document.type', 'blog_post'), { orderings: '[document.first_publication_date desc]' })
-	console.log(query)
 	const posts = results.filter(e => e.data.category === query.category)
-	console.log(posts)
 	return { props: { posts, category: query.category } }
 }
 // 'fulltext search'
