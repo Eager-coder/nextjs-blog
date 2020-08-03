@@ -11,22 +11,22 @@ function Footer() {
 					<div className='links'>
 						<div className='link-column'>
 							<span className='column-name'>Articles</span>
-							<Link href='/category/education'>
+							<Link href='/category/[category]' as='/category/education' passHref>
 								<a className='link'>Education</a>
 							</Link>
-							<Link href='/category/hobby'>
+							<Link href='/category/[category]' as='/category/hobby' passHref>
 								<a className='link'>Hobby</a>
 							</Link>
-							<Link href='/category/entertainment'>
+							<Link href='/category/[category]' as='/category/entertainment' passHref>
 								<a className='link'>Entertainment</a>
 							</Link>
-							<Link href='/category/business'>
+							<Link href='/category/[category]' as='/category/business' passHref>
 								<a className='link'>Business</a>
 							</Link>
-							<Link href='/category/lifestyle'>
+							<Link href='/category/[category]' as='/category/lifestyle' passHref>
 								<a className='link'>Lifestyle</a>
 							</Link>
-							<Link href='/category/tech'>
+							<Link href='/category/[category]' as='/category/tech' passHref>
 								<a className='link'>Tech</a>
 							</Link>
 						</div>

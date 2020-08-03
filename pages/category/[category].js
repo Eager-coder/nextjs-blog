@@ -3,12 +3,14 @@ import Prismic from 'prismic-javascript'
 import ArticleLink from '../../components/ArticleLink'
 import '../../styles/css/Category.css'
 import Layout from '../../components/Layout'
+import { useRouter } from 'next/router'
 import Head from 'next/head'
 function Category({ posts, category }) {
+	const route = useRouter()
 	return (
 		<Layout>
 			<Head>
-				<title>{category | EduPro}</title>
+				<title>{category} | EduPro</title>
 				<meta property='og:url' content={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} />
 				<meta property='og:type' content='website' />
 			</Head>
