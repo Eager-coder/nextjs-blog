@@ -1,0 +1,302 @@
+article.post {
+  margin: 0 auto;
+}
+
+article.post .post-container {
+  width: 100%;
+}
+
+article.post .post-container .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+  text-align: center;
+}
+
+article.post .post-container .hero .category {
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+}
+
+article.post .post-container .hero h1 {
+  max-width: 1100px;
+  margin: auto;
+  font-size: 3.5rem;
+  font-weight: 700;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+article.post .post-container .hero p {
+  font-size: 1.2rem;
+  max-width: 1100px;
+  padding: 0 50px;
+  line-height: 1.2;
+}
+
+article.post .post-container .hero hr {
+  width: 100px;
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin: 40px 0;
+}
+
+article.post .post-container .hero .date-and-author {
+  margin-bottom: 30px;
+}
+
+article.post .post-container .hero img {
+  width: 100%;
+}
+
+article.post .post-container .slice-container {
+  max-width: 800px;
+  padding: 0 50px;
+  width: 100%;
+  margin: auto;
+}
+
+article.post .post-container .slice-container * {
+  font-family: Chronicle, Georgia, Times, Times New Roman, serif;
+}
+
+article.post .post-container .slice-container p {
+  font-size: 1.3rem;
+  margin: 30px 0;
+  line-height: 1.5;
+}
+
+article.post .post-container .slice-container img {
+  width: 100%;
+}
+
+article.post .post-container .slice-container ul,
+article.post .post-container .slice-container ol {
+  margin: 20px 0 20px 50px;
+}
+
+article.post .post-container .slice-container ul li,
+article.post .post-container .slice-container ol li {
+  font-size: 1.3rem;
+  margin: 5px 0;
+}
+
+article.post .post-container .slice-container .embed-youtube iframe {
+  width: 100%;
+  min-height: 400px;
+}
+
+article.post .post-container .slice-container blockquote {
+  padding-left: 50px;
+  border-left: 5px orange solid;
+  margin: 20px 0;
+}
+
+article.post .post-container .slice-container blockquote p {
+  font-size: 1.4rem;
+}
+
+article.post .post-container .slice-container blockquote cite {
+  display: block;
+  text-align: right;
+}
+
+article.post .post-container section.share {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 50px;
+}
+
+article.post .post-container section.share h4 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+article.post .post-container section.share .share-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article.post .post-container section.share .share-links .fab {
+  font-size: 1.6rem;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px;
+}
+
+article.post .post-container section.share .share-links .fa-facebook-f {
+  color: white;
+  background-color: #38529a;
+}
+
+article.post .post-container section.share .share-links .fa-twitter {
+  color: white;
+  background-color: #26a3d8;
+}
+
+article.post .post-container section.share .share-links .fa-vk {
+  background-color: #4a76a8;
+  color: white;
+}
+
+article.post .post-container section.comments {
+  margin: 50px auto;
+  width: 100%;
+  max-width: 700px;
+  padding: 0 50px;
+}
+
+article.post .post-container section.comments .comment-title {
+  font-size: 2.5rem;
+}
+
+article.post .post-container section.comments .comments-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+article.post .post-container section.comments .comments-container > div {
+  margin: auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  article.post .post-container .hero h1 {
+    font-size: 2.8rem;
+  }
+  article.post .post-container .hero p {
+    font-size: 1.1rem;
+    max-width: 1000px;
+  }
+  article.post .post-container .slice-container p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+  article.post .post-container .slice-container ol li,
+  article.post .post-container .slice-container ul li {
+    font-size: 1.2rem;
+  }
+  article.post .post-container section.share h4 {
+    font-size: 1.5rem;
+  }
+  article.post .post-container section.comments .comment-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  article.post .post-container .hero h1 {
+    font-size: 2.5rem;
+  }
+  article.post .post-container .hero p {
+    font-size: 1.1rem;
+    max-width: 900px;
+  }
+  article.post .post-container .slice-container {
+    padding: 0 20px;
+  }
+  article.post .post-container .slice-container blockquote p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  article.post .post-container .hero {
+    padding: 20px 0;
+  }
+  article.post .post-container .hero .category {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  article.post .post-container .hero h1 {
+    font-size: 1.3rem;
+    padding: 0 15px;
+    margin: 10px 0;
+  }
+  article.post .post-container .hero p {
+    padding: 0 15px;
+    font-size: 0.8rem;
+  }
+  article.post .post-container .hero hr {
+    margin: 20px 0;
+    height: 1px;
+  }
+  article.post .post-container .hero .date-and-author span {
+    font-size: 0.8rem;
+  }
+  article.post .post-container .slice-container p {
+    font-size: 1rem;
+  }
+  article.post .post-container .slice-container ol,
+  article.post .post-container .slice-container ul {
+    margin-left: 20px;
+  }
+  article.post .post-container .slice-container ol li,
+  article.post .post-container .slice-container ul li {
+    font-size: 1rem;
+  }
+  article.post .post-container .slice-container .embed-youtube iframe {
+    min-height: 150px;
+  }
+  article.post .post-container .slice-container blockquote {
+    padding-left: 30px;
+  }
+  article.post .post-container .slice-container blockquote p {
+    font-size: 1.1rem;
+  }
+  article.post .post-container section.share {
+    padding: 0 20px;
+    margin: 20px auto;
+  }
+  article.post .post-container section.share h4 {
+    font-size: 1.2rem;
+  }
+  article.post .post-container section.share .share-links .fab {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+    padding: 7px;
+  }
+  article.post .post-container section.comments {
+    padding: 0 20px;
+    margin: 20px auto;
+  }
+  article.post .post-container section.comments .comment-title {
+    font-size: 1.2rem;
+  }
+}
