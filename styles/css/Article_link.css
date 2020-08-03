@@ -3,12 +3,20 @@
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-.article img {
+.article:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.article .image-link img {
   width: 100%;
-  height: auto;
-  border: #ffca1e 4px solid;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article .textbox {
@@ -78,14 +86,8 @@
 }
 
 @media screen and (max-width: 580px) {
-  .article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .article .image-link {
     display: block;
-    width: 50%;
   }
   .article .image-link img {
     width: 100%;
@@ -97,7 +99,6 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 50%;
   }
   .article .textbox .category {
     font-size: 0.8rem;

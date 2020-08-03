@@ -50,7 +50,9 @@ article.post {
 			width: 100%;
 			margin: auto;
 			& * {
-				font-family: Chronicle, Georgia, Times, Times New Roman, serif;
+				// font-family: Chronicle, Georgia, Times, Times New Roman, serif;
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+					'Helvetica Neue', sans-serif;
 			}
 			p {
 				font-size: 1.3rem;
