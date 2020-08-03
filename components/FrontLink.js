@@ -17,7 +17,6 @@ const FrontLink = ({ link, className }) => {
 						<h2 className='title'>{link.title}</h2>
 					</a>
 				</Link>
-				<p>{link.description}...</p>
 				<div className='meta'>
 					{/* <span className='date'>{link.date}</span> */}
 					<span className='author'>{link.author}</span>

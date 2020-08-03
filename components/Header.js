@@ -44,19 +44,39 @@ const Header = () => {
 					</ul>
 				</nav>
 				<div className='burger-btn' onClick={toggleMenu}>
-					<img src='/assets/burger.svg' alt='' />
+					<img src='/images/burger.svg' alt='' />
 				</div>
 			</div>
 			<nav className='nav-mobile'>
-				<ul>
+				<ul className='nav-links'>
 					<li>
 						<Link href='/'>
 							<a>Home</a>
 						</Link>
 					</li>
 					<li>
-						<Link href='/all-posts'>
-							<a>Posts</a>
+						<Link href='/category/education'>
+							<a>Education</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/category/hobby'>
+							<a>Hobby</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/category/entertainment'>
+							<a>Entertainment</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/category/lifestyle'>
+							<a>Lifestyle</a>
+						</Link>
+					</li>
+					<li>
+						<Link href='/category/business'>
+							<a>Business</a>
 						</Link>
 					</li>
 					<li>
@@ -74,6 +94,17 @@ const Header = () => {
 							<a>Products</a>
 						</Link>
 					</li>
+				</ul>
+				<ul className='media-links'>
+					<a href='www.instagram.com'>
+						<i className='fab fa-instagram'></i>
+					</a>
+					<a href='www.twitter.com'>
+						<i className='fab fa-twitter'></i>
+					</a>
+					<a href='www.facebook.com'>
+						<i aria-hidden='false' className='fab fa-facebook-f'></i>
+					</a>
 				</ul>
 			</nav>
 		</header>

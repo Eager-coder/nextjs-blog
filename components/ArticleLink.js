@@ -16,6 +16,7 @@ function ArticleLink({ e }) {
 				<Link href={`/post/[slug]`} as={`/post/${e.uid}`} passHref>
 					<a>
 						<h2 className='title'>{e.data.title[0].text}</h2>
+						<p className='desc'>{e.data.description}</p>
 					</a>
 				</Link>
 				<div className='meta'>
