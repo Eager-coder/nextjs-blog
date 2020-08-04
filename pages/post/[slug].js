@@ -46,26 +46,6 @@ const Post = ({ postData }) => {
 					<section className='share'>
 						<h4>Share the article</h4>
 						<div className='share-links'>
-							{/* <a
-								className='share-facebook'
-								href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
-								target='_blank'>
-								<i className='fab fa-facebook-f'></i>
-							</a>
-							<a
-								href='https://twitter.com/share?ref_src=twsrc%5Etfw'
-								// className='twitter-share-button'
-								// data-size='large'
-								data-url={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
-								data-show-count='false'>
-								<i className='fab fa-twitter'></i>
-							</a>
-							<a
-								className='share-vk'
-								href={`https://vk.com/share.php?url=https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
-								target='_blank'>
-								<i className='fab fa-vk'></i>
-							</a> */}
 							<FacebookShareButton url={`https://edupro.cf${route.asPath}`}>
 								<div className='share-facebook'>
 									<img src='/images/facebook-f-brands.svg' alt='' />
@@ -88,11 +68,7 @@ const Post = ({ postData }) => {
 						<h4 className='comment-title'>Leave a comment</h4>
 						<div className='comments-container'>
 							<FacebookProvider appId='749408989149871'>
-								<Comments
-									width='100%'
-									data-mobile
-									href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
-								/>
+								<Comments width='100%' data-mobile href={`https://edupro.cf${route.asPath}`} />
 							</FacebookProvider>
 						</div>
 					</section>

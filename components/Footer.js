@@ -32,13 +32,13 @@ function Footer() {
 						</div>
 						<div className='link-column'>
 							<span className='column-name'>WE ARE</span>
-							<Link href='/' passHref>
+							<Link href='/about' passHref>
 								<a className='link'>About</a>
 							</Link>
-							<Link href='/' passHref>
+							<Link href='/about' passHref>
 								<a className='link'>Our team</a>
 							</Link>
-							<Link href='/' passHref>
+							<Link href='/[about]' passHref>
 								<a className='link'>Support us</a>
 							</Link>
 						</div>
