@@ -46,10 +46,10 @@ function Footer() {
 					<div className='social-media'>
 						<span className='column-name'>Follow us</span>
 						<div className='meida-links'>
-							<a className='link' target='_blank' href='www.instagram.com'>
+							<a className='link' target='_blank' href='https://instagram.com'>
 								<img src='/images/instagram-brands.svg' alt='' />
 							</a>
-							<a className='link' target='_blank' href='www.twitter.com'>
+							<a className='link' target='_blank' href='https://twitter.com'>
 								<img src='/images/twitter-brands.svg' alt='' />
 							</a>
 							<a className='link' target='_blank' href='https://facebook.com'>
