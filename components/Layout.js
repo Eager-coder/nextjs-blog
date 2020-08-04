@@ -7,7 +7,6 @@ const Layout = ({ children }) => {
 		<>
 			<Head>
 				<link rel='shortcut icon' href='/images/icon.png' type='image/x-icon' />
-				<script src='https://kit.fontawesome.com/86ec0857fc.js' crossorigin='anonymous'></script>
 			</Head>
 			<Header />
 			<main>{children}</main>

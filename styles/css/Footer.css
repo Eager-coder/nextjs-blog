@@ -71,7 +71,7 @@ footer .footer-container .flex-container .social-media .meida-links {
   padding: 20px 0;
 }
 
-footer .footer-container .flex-container .social-media .meida-links > div {
+footer .footer-container .flex-container .social-media .meida-links > a {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,25 +84,27 @@ footer .footer-container .flex-container .social-media .meida-links > div {
           align-items: center;
   border-radius: 50%;
   padding: 10px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background-color: #202020;
   margin-right: 20px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-footer .footer-container .flex-container .social-media .meida-links > div:hover {
+footer .footer-container .flex-container .social-media .meida-links > a:hover {
   background-color: white;
 }
 
-footer .footer-container .flex-container .social-media .meida-links > div:hover .fab {
-  color: black;
+footer .footer-container .flex-container .social-media .meida-links > a:hover img {
+  -webkit-filter: invert(0);
+          filter: invert(0);
 }
 
-footer .footer-container .flex-container .social-media .fab {
-  font-size: 1.5rem;
-  color: white;
+footer .footer-container .flex-container .social-media .meida-links > a img {
+  height: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -147,7 +149,7 @@ footer .footer-container .bottom-items span {
     font-size: 1rem;
   }
   footer .footer-container .flex-container .social-media {
-    margin-left: 0;
+    margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -159,7 +161,7 @@ footer .footer-container .bottom-items span {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer .footer-container .flex-container .social-media .meida-links div {
+  footer .footer-container .flex-container .social-media .meida-links a {
     margin: 0 10px;
   }
 }
@@ -194,7 +196,7 @@ footer .footer-container .bottom-items span {
     margin: 10px 0;
   }
   footer .footer-container .flex-container .links .link-column .link {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
   footer .footer-container .bottom-items span {
     font-size: 0.8rem;

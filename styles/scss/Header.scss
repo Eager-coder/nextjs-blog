@@ -12,7 +12,7 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		max-width: 1100px;
+		max-width: 1200px;
 		width: 100%;
 		padding: 0 50px;
 		margin: auto;
@@ -26,26 +26,54 @@ header {
 				content: 'Pro';
 			}
 		}
-	}
-
-	nav {
-		ul {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			list-style: none;
-			li {
-				margin: 0 20px;
-				a {
-					color: black;
-					padding-bottom: 10px;
-					text-transform: uppercase;
-					font-size: 0.9rem;
-					font-weight: 600;
+		.nav-desktop {
+			ul {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				list-style: none;
+				li {
+					margin: 0 20px;
+					a,
+					span {
+						color: black;
+						padding-bottom: 10px;
+						text-transform: uppercase;
+						font-size: 0.9rem;
+						font-weight: 600;
+					}
+				}
+				.posts {
+					padding: 0;
+					cursor: pointer;
+					span {
+						.chevron {
+							height: 15px;
+							padding-top: 2px;
+							margin-left: 5px;
+						}
+					}
+				}
+				.posts-list {
+					top: 4rem;
+					background-color: white;
+					position: absolute;
+					display: none;
+					width: max-content;
+					padding: 0 20px;
+					box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+					li {
+						width: 100%;
+						margin: 20px 0px;
+					}
+				}
+				.posts-list-active {
+					display: block;
 				}
 			}
 		}
 	}
+
 	.nav-mobile {
 		display: none;
 	}
@@ -60,7 +88,12 @@ header {
 		justify-content: center;
 		align-items: center;
 		img {
-			width: 50px;
+			width: 100%;
+		}
+	}
+	@media (max-width: 850px) {
+		.header-container .nav-desktop ul li {
+			margin: 0 15px;
 		}
 	}
 	@media (max-width: 768px) {
@@ -70,18 +103,23 @@ header {
 				font-size: 2rem;
 			}
 		}
-		nav {
+		.nav-desktop {
 			display: none;
 		}
 		.burger-btn {
 			display: flex;
 		}
 		.nav-mobile {
-			display: block;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			height: 0;
 			overflow: hidden;
-			transition: 0.3s;
+			position: relative;
+			transition: 0.4s;
 			.nav-links {
+				overflow-y: auto;
+				height: max-content;
 				flex-direction: column;
 				li {
 					display: flex;
@@ -95,12 +133,20 @@ header {
 					width: 90%;
 					border-bottom: 1px black solid;
 					padding: 10px 0;
+					font-weight: 500;
+					color: black;
+					font-size: 1rem;
 				}
 			}
-			.meida-links {
+			.media-links {
+				margin-bottom: 50px;
 				display: flex;
-				padding: 20px 0;
-				& > a {
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 120px;
+				background: linear-gradient(90deg, yellow, orange);
+				.link {
 					cursor: pointer;
 					display: flex;
 					justify-content: center;
@@ -110,19 +156,25 @@ header {
 					width: 40px;
 					height: 40px;
 					background-color: rgb(32, 32, 32);
-					margin-right: 20px;
+					margin: 0 20px;
 					transition: 0.2s;
 					&:hover {
 						background-color: white;
 					}
-					&:hover .fab {
-						color: rgb(0, 0, 0);
+					&:hover img {
+						filter: invert(0);
+					}
+					img {
+						height: 100%;
+						filter: invert(1);
+						transition: 0.2s;
 					}
 				}
 			}
 		}
 	}
 	.menu-active {
+		overflow-y: scroll;
 		height: 100vh;
 	}
 }

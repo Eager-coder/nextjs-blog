@@ -1,10 +1,23 @@
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import '../styles/css/Header.css'
 const Header = () => {
+	const [isListShown, setIsShown] = useState(false)
+	useEffect(() => {
+		document.addEventListener('click', e => {
+			const postsList = document.querySelector('.posts-list')
+			if (e.target.id === 'toggle-post-list' || e.target.parentElement.id === 'toggle-post-list') {
+				console.log('efwef')
+				postsList.classList.toggle('posts-list-active')
+			} else {
+				postsList.classList.remove('posts-list-active')
+			}
+		})
+	})
+
 	const toggleMenu = () => {
 		const menu = document.querySelector('.nav-mobile')
 		menu.classList.toggle('menu-active')
-		console.log('hello')
 	}
 	return (
 		<header>
@@ -14,17 +27,44 @@ const Header = () => {
 						<a>Edu</a>
 					</Link>
 				</h1>
-				<nav>
+				<nav className='nav-desktop'>
 					<ul>
 						<li>
 							<Link href='/'>
 								<a>Home</a>
 							</Link>
 						</li>
-						<li>
-							<Link href='/all-posts'>
-								<a>Posts</a>
-							</Link>
+						<li className='posts'>
+							<span id='toggle-post-list'>
+								Posts <img className='chevron' src='/images/chevron-down-solid.svg' alt='' />
+							</span>
+							<ul className='posts-list'>
+								<li>
+									<Link href='/category/education'>
+										<a>Education</a>
+									</Link>
+								</li>
+								<li>
+									<Link href='/category/hobby'>
+										<a>Hobby</a>
+									</Link>
+								</li>
+								<li>
+									<Link href='/category/entertainment'>
+										<a>Entertainment</a>
+									</Link>
+								</li>
+								<li>
+									<Link href='/category/lifestyle'>
+										<a>Lifestyle</a>
+									</Link>
+								</li>
+								<li>
+									<Link href='/category/business'>
+										<a>Business</a>
+									</Link>
+								</li>
+							</ul>
 						</li>
 						<li>
 							<Link href='/about'>
@@ -96,14 +136,14 @@ const Header = () => {
 					</li>
 				</ul>
 				<ul className='media-links'>
-					<a href='www.instagram.com'>
-						<i className='fab fa-instagram'></i>
+					<a className='link' target='_blank' href='www.instagram.com'>
+						<img src='/images/instagram-brands.svg' alt='' />
 					</a>
-					<a href='www.twitter.com'>
-						<i className='fab fa-twitter'></i>
+					<a className='link' target='_blank' href='www.twitter.com'>
+						<img src='/images/twitter-brands.svg' alt='' />
 					</a>
-					<a href='www.facebook.com'>
-						<i aria-hidden='false' className='fab fa-facebook-f'></i>
+					<a className='link' target='_blank' href='https://facebook.com'>
+						<img src='/images/facebook-f-brands.svg' alt='' />
 					</a>
 				</ul>
 			</nav>

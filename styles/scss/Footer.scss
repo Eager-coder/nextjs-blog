@@ -44,31 +44,30 @@ footer {
 				.meida-links {
 					display: flex;
 					padding: 20px 0;
-					& > div {
+					& > a {
 						cursor: pointer;
 						display: flex;
 						justify-content: center;
 						align-items: center;
 						border-radius: 50%;
 						padding: 10px;
-						width: 40px;
-						height: 40px;
+						width: 45px;
+						height: 45px;
 						background-color: rgb(32, 32, 32);
 						margin-right: 20px;
 						transition: 0.2s;
 						&:hover {
 							background-color: white;
 						}
-						&:hover .fab {
-							color: rgb(0, 0, 0);
+						&:hover img {
+							filter: invert(0);
+						}
+						img {
+							height: 100%;
+							filter: invert(1);
+							transition: 0.2s;
 						}
 					}
-				}
-
-				.fab {
-					font-size: 1.5rem;
-					color: white;
-					transition: 0.2s;
 				}
 			}
 		}
@@ -94,19 +93,18 @@ footer {
 				flex-direction: column;
 				align-items: center;
 				margin-bottom: 50px;
-
 				.links {
 					width: 100%;
 					margin: 30px 0;
 					font-size: 1rem;
 				}
 				.social-media {
-					margin-left: 0;
+					margin: 0;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
 					.meida-links {
-						div {
+						a {
 							margin: 0 10px;
 						}
 					}
@@ -142,7 +140,7 @@ footer {
 					.link-column {
 						margin: 10px 0;
 						.link {
-							font-size: 0.85rem;
+							font-size: 1rem;
 						}
 					}
 				}

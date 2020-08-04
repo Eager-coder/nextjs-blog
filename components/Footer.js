@@ -46,15 +46,15 @@ function Footer() {
 					<div className='social-media'>
 						<span className='column-name'>Follow us</span>
 						<div className='meida-links'>
-							<div>
-								<i className='fab fa-instagram'></i>
-							</div>
-							<div>
-								<i className='fab fa-twitter'></i>
-							</div>
-							<div>
-								<i className='fab fa-facebook-f'></i>
-							</div>
+							<a className='link' target='_blank' href='www.instagram.com'>
+								<img src='/images/instagram-brands.svg' alt='' />
+							</a>
+							<a className='link' target='_blank' href='www.twitter.com'>
+								<img src='/images/twitter-brands.svg' alt='' />
+							</a>
+							<a className='link' target='_blank' href='https://facebook.com'>
+								<img src='/images/facebook-f-brands.svg' alt='' />
+							</a>
 						</div>
 					</div>
 				</div>
