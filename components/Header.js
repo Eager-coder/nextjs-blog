@@ -2,17 +2,21 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import '../styles/css/Header.css'
 const Header = () => {
-	const [isListShown, setIsShown] = useState(false)
-	useEffect(() => {
-		document.addEventListener('click', e => {
-			const postsList = document.querySelector('.posts-list')
-			if (e.target.id === 'toggle-post-list' || e.target.parentElement.id === 'toggle-post-list') {
-				console.log('efwef')
-				postsList.classList.toggle('posts-list-active')
-			} else {
+	const toggle = e => {
+		const postsList = document.querySelector('.posts-list')
+		if (e.target.id === 'toggle-post-list' || e.target.parentElement.id === 'toggle-post-list') {
+			if (postsList.classList.contains('posts-list-active')) {
 				postsList.classList.remove('posts-list-active')
+			} else {
+				postsList.classList.add('posts-list-active')
 			}
-		})
+		} else {
+			postsList.classList.remove('posts-list-active')
+		}
+	}
+	useEffect(() => {
+		document.addEventListener('click', e => toggle(e))
+		return document.removeEventListener('click', e => toggle(e))
 	})
 
 	const toggleMenu = () => {
