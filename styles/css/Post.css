@@ -71,6 +71,7 @@ article.post .post-container .slice-container {
   margin: auto;
 }
 
+article.post .post-container .slice-container blockquote,
 article.post .post-container .slice-container * {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
@@ -83,6 +84,21 @@ article.post .post-container .slice-container p {
 
 article.post .post-container .slice-container img {
   width: 100%;
+}
+
+article.post .post-container .slice-container h2,
+article.post .post-container .slice-container h3,
+article.post .post-container .slice-container h4,
+article.post .post-container .slice-container h5 {
+  margin: 20px 0;
+}
+
+article.post .post-container .slice-container h2 {
+  font-size: 2rem;
+}
+
+article.post .post-container .slice-container h3 {
+  font-size: 1.4rem;
 }
 
 article.post .post-container .slice-container ul,
@@ -263,6 +279,12 @@ article.post .post-container section.comments .comments-container > div {
   }
   article.post .post-container .slice-container p {
     font-size: 1rem;
+  }
+  article.post .post-container .slice-container h2 {
+    font-size: 1.3rem;
+  }
+  article.post .post-container .slice-container h3 {
+    font-size: 1.1rem;
   }
   article.post .post-container .slice-container ol,
   article.post .post-container .slice-container ul {
