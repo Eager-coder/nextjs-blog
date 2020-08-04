@@ -14,7 +14,10 @@ const Post = ({ postData }) => {
 		<Layout>
 			<Head>
 				<title>{postData.data.title[0].text} | EduPro</title>
-				<meta property='og:url' content={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} />
+				<meta
+					property='og:url'
+					content={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
+				/>
 				<meta property='og:type' content='website' />
 				<meta property='og:title' content={postData.data.title[0].text} />
 				<meta property='og:description' content={postData.data.description} />
@@ -33,7 +36,8 @@ const Post = ({ postData }) => {
 						<hr />
 						<div className='date-and-author'>
 							<span>
-								By {postData.data.author} | {moment(postData.data.first_publication_date).format('LL')}
+								By {postData.data.author} |{' '}
+								{moment(postData.data.first_publication_date).format('LL')}
 							</span>
 						</div>
 						<img src={postData.data.image.url} alt='' />
@@ -42,7 +46,10 @@ const Post = ({ postData }) => {
 					<section className='share'>
 						<h4>Share the article</h4>
 						<div className='share-links'>
-							<a className='share-facebook' href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} target='_blank'>
+							{/* <a
+								className='share-facebook'
+								href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
+								target='_blank'>
 								<i className='fab fa-facebook-f'></i>
 							</a>
 							<a
@@ -53,19 +60,39 @@ const Post = ({ postData }) => {
 								data-show-count='false'>
 								<i className='fab fa-twitter'></i>
 							</a>
-							<a className='share-vk' href={`https://vk.com/share.php?url=https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} target='_blank'>
+							<a
+								className='share-vk'
+								href={`https://vk.com/share.php?url=https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
+								target='_blank'>
 								<i className='fab fa-vk'></i>
-							</a>
-							<FacebookShareButton url={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}>Hefew</FacebookShareButton>
-							<VKShareButton url={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}>Sharevk</VKShareButton>
-							<TwitterShareButton url={`https://nextjs-blog-eta-nine.vercel.app/${route.asPath}`}>Tweet</TwitterShareButton>
+							</a> */}
+							<FacebookShareButton url={`https://edupro.cf${route.asPath}`}>
+								<div className='share-facebook'>
+									<img src='/images/facebook-f-brands.svg' alt='' />
+								</div>
+							</FacebookShareButton>
+
+							<TwitterShareButton url={`https://edupro.cf${route.asPath}`}>
+								<div className='share-twitter'>
+									<img src='/images/twitter-brands.svg' alt='' />
+								</div>
+							</TwitterShareButton>
+							<VKShareButton url={`https://edupro.cf${route.asPath}`}>
+								<div className='share-vk'>
+									<img src='/images/vk-brands.svg' alt='' />
+								</div>
+							</VKShareButton>
 						</div>
 					</section>
 					<section className='comments'>
 						<h4 className='comment-title'>Leave a comment</h4>
 						<div className='comments-container'>
 							<FacebookProvider appId='749408989149871'>
-								<Comments width='100%' href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} />
+								<Comments
+									width='100%'
+									data-mobile
+									href={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
+								/>
 							</FacebookProvider>
 						</div>
 					</section>

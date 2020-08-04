@@ -72,7 +72,7 @@ article.post .post-container .slice-container {
 }
 
 article.post .post-container .slice-container * {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 article.post .post-container .slice-container p {
@@ -134,12 +134,11 @@ article.post .post-container section.share .share-links {
   display: flex;
 }
 
-article.post .post-container section.share .share-links .fab {
-  font-size: 1.6rem;
-  padding: 10px;
-  border-radius: 50%;
+article.post .post-container section.share .share-links div {
   width: 50px;
   height: 50px;
+  padding: 10px;
+  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,19 +151,22 @@ article.post .post-container section.share .share-links .fab {
   margin: 0 10px;
 }
 
-article.post .post-container section.share .share-links .fa-facebook-f {
-  color: white;
+article.post .post-container section.share .share-links div img {
+  height: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+article.post .post-container section.share .share-links .share-facebook {
   background-color: #38529a;
 }
 
-article.post .post-container section.share .share-links .fa-twitter {
-  color: white;
-  background-color: #26a3d8;
+article.post .post-container section.share .share-links .share-vk {
+  background-color: #4a76a8;
 }
 
-article.post .post-container section.share .share-links .fa-vk {
-  background-color: #4a76a8;
-  color: white;
+article.post .post-container section.share .share-links .share-twitter {
+  background-color: #26a3d8;
 }
 
 article.post .post-container section.comments {
