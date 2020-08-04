@@ -24,11 +24,11 @@ const Header = () => {
 	return (
 		<header>
 			<div className='header-container'>
-				<h1>
+				<span>
 					<Link href='/'>
 						<a>Edu</a>
 					</Link>
-				</h1>
+				</span>
 				<nav className='nav-desktop'>
 					<ul>
 						<li>

@@ -18,12 +18,16 @@ const Post = ({ postData }) => {
 					property='og:url'
 					content={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
 				/>
+				<meta name='description' content={postData.data.description} />
 				<meta property='og:type' content='website' />
 				<meta property='og:title' content={postData.data.title[0].text} />
 				<meta property='og:description' content={postData.data.description} />
 				<meta property='og:image' content={postData.data.image.url} />
 				<meta name='twitter:title' content={postData.data.title[0].text}></meta>
 				<meta name='twitter:image' content={postData.data.image.url}></meta>
+				<meta name='twitter:description' content={postData.data.description} />
+				<meta name='twitter:image' content={postData.data.image.url} />
+				<meta name='twitter:card' content='summary_large_image' />
 			</Head>
 			<article className='post'>
 				<div className='post-container'>

@@ -11,7 +11,8 @@ function Category({ posts, category }) {
 		<Layout>
 			<Head>
 				<title>{category} | EduPro</title>
-				<meta property='og:url' content={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} />
+				<meta name='description' content={`Edupro articles. Category - ` + category} />
+				<meta property='og:url' content={`https://edupro.cf${route.asPath}`} />
 				<meta property='og:type' content='website' />
 			</Head>
 			<section className='category'>
@@ -29,7 +30,9 @@ function Category({ posts, category }) {
 export default Category
 
 export async function getServerSideProps({ query }) {
-	const { results } = await Client.query(Prismic.Predicates.at('document.type', 'blog_post'), { orderings: '[document.first_publication_date desc]' })
+	const { results } = await Client.query(Prismic.Predicates.at('document.type', 'blog_post'), {
+		orderings: '[document.first_publication_date desc]',
+	})
 	const posts = results.filter(e => e.data.category === query.category)
 	return { props: { posts, category: query.category } }
 }

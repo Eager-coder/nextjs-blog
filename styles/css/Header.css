@@ -28,15 +28,16 @@ header .header-container {
   height: 4rem;
 }
 
-header .header-container h1 a {
+header .header-container span a {
   background: -webkit-gradient(linear, left top, right top, from(#ffed1c), to(#ff8b1e));
   background: linear-gradient(90deg, #ffed1c 0%, #ff8b1e);
   font-size: 2.5rem;
+  font-weight: 700;
   color: white;
   padding: 0 10px;
 }
 
-header .header-container h1 a::after {
+header .header-container span a::after {
   content: 'Pro';
 }
 
@@ -133,7 +134,7 @@ header .burger-btn img {
   header .header-container {
     padding: 0 20px;
   }
-  header .header-container h1 a {
+  header .header-container span a {
     font-size: 2rem;
   }
   header .nav-desktop {

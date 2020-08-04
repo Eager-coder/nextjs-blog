@@ -38,7 +38,7 @@ function Footer() {
 							<Link href='/about' passHref>
 								<a className='link'>Our team</a>
 							</Link>
-							<Link href='/[about]' passHref>
+							<Link href='/about' passHref>
 								<a className='link'>Support us</a>
 							</Link>
 						</div>
