@@ -246,6 +246,5 @@ header .burger-btn img {
 }
 
 header .menu-active {
-  overflow-y: scroll;
   height: 100vh;
 }

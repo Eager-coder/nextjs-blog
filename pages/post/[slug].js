@@ -10,7 +10,6 @@ import { FacebookProvider, Comments } from 'react-facebook'
 import Head from 'next/head'
 const Post = ({ postData }) => {
 	const route = useRouter()
-	console.log(<Head></Head>)
 	return (
 		<Layout>
 			<Head>
@@ -51,8 +50,7 @@ const Post = ({ postData }) => {
 								// className='twitter-share-button'
 								// data-size='large'
 								data-url={`https://nextjs-blog-eta-nine.vercel.app${route.asPath}`}
-								data-show-count='false'
-							>
+								data-show-count='false'>
 								<i className='fab fa-twitter'></i>
 							</a>
 							<a className='share-vk' href={`https://vk.com/share.php?url=https://nextjs-blog-eta-nine.vercel.app${route.asPath}`} target='_blank'>

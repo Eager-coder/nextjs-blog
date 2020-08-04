@@ -53,7 +53,6 @@ export async function getServerSideProps() {
 		},
 	} = await Client.getSingle('home_page')
 	const { results } = await Client.query(Prismic.Predicates.at('document.type', 'blog_post'), { orderings: '[document.first_publication_date desc]' })
-	console.log(left_link)
 	let links = {}
 	results.forEach(e => {
 		if (e.uid === left_link.uid)

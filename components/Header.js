@@ -2,22 +2,11 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import '../styles/css/Header.css'
 const Header = () => {
-	const toggle = e => {
-		const postsList = document.querySelector('.posts-list')
-		if (e.target.id === 'toggle-post-list' || e.target.parentElement.id === 'toggle-post-list') {
-			if (postsList.classList.contains('posts-list-active')) {
-				postsList.classList.remove('posts-list-active')
-			} else {
-				postsList.classList.add('posts-list-active')
-			}
-		} else {
-			postsList.classList.remove('posts-list-active')
-		}
+	const [isShown, setIsShown] = useState(false)
+	const handleClick = e => {
+		const postList = document.querySelector('.posts-list')
+		postList.classList.toggle('posts-list-active')
 	}
-	useEffect(() => {
-		document.addEventListener('click', e => toggle(e))
-		return document.removeEventListener('click', e => toggle(e))
-	})
 
 	const toggleMenu = () => {
 		const menu = document.querySelector('.nav-mobile')
@@ -39,7 +28,7 @@ const Header = () => {
 							</Link>
 						</li>
 						<li className='posts'>
-							<span id='toggle-post-list'>
+							<span id='toggle-post-list' onClick={handleClick}>
 								Posts <img className='chevron' src='/images/chevron-down-solid.svg' alt='' />
 							</span>
 							<ul className='posts-list'>
