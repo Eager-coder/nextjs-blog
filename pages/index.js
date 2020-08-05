@@ -10,7 +10,10 @@ const Home = ({ results, links }) => {
 		<Layout>
 			<Head>
 				<title>EduPro</title>
-				<meta name='description' content='Education Progress - quality of education that you deserve	' />
+				<meta
+					name='description'
+					content='Education Progress - quality of education that you deserve	'
+				/>
 				<meta name='twitter:card' value='summary' />
 				<meta property='og:title' content='Education Progress' />
 				<meta property='og:type' content='website' />
@@ -19,7 +22,10 @@ const Home = ({ results, links }) => {
 					property='og:image'
 					content='https://images.prismic.io/gatsby-and-prismic-website/47149ecf-207c-4b2f-b411-ef55afe803e0_man.webp?auto=compress,format&amp;rect=0,0,600,400&amp;w=1500&amp;h=1000'
 				/>
-				<meta property='og:description' content='Education Progress - quality of education that you deserve' />
+				<meta
+					property='og:description'
+					content='Education Progress - quality of education that you deserve'
+				/>
 			</Head>
 			<div className='home-container'>
 				<section className='front-grid'>
@@ -52,36 +58,22 @@ export async function getServerSideProps() {
 			],
 		},
 	} = await Client.getSingle('home_page')
-	const { results } = await Client.query(Prismic.Predicates.at('document.type', 'blog_post'), { orderings: '[document.first_publication_date desc]' })
+	const { results } = await Client.query(Prismic.Predicates.at('document.type', 'blog_post'), {
+		orderings: '[document.first_publication_date desc]',
+	})
 	let links = {}
 	results.forEach(e => {
-		if (e.uid === left_link.uid)
-			links.leftLink = {
-				uid: e.uid,
-				image: e.data.image.url,
-				title: e.data.title[0].text,
-				category: e.data.category,
-				date: e.data.publication_date,
-				author: e.data.author,
-			}
-		if (e.uid === top_link.uid)
-			links.topLink = {
-				uid: e.uid,
-				image: e.data.image.url,
-				title: e.data.title[0].text,
-				category: e.data.category,
-				date: e.data.publication_date,
-				author: e.data.author,
-			}
-		if (e.uid === bottom_link.uid)
-			links.bottomLink = {
-				uid: e.uid,
-				image: e.data.image.url,
-				title: e.data.title[0].text,
-				category: e.data.category,
-				date: e.data.publication_date,
-				author: e.data.author,
-			}
+		const data = {
+			uid: e.uid,
+			image: e.data.image.url,
+			title: e.data.title[0].text,
+			category: e.data.category,
+			date: e.data.publication_date,
+			author: e.data.author,
+		}
+		if (data.uid === left_link.uid) links.leftLink = data
+		else if (e.uid === top_link.uid) links.topLink = data
+		else if (e.uid === bottom_link.uid) links.bottomLink = data
 	})
 	return {
 		props: { results, links },

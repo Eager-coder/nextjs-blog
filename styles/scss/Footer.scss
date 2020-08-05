@@ -31,12 +31,14 @@ footer {
 				.link-column {
 					display: flex;
 					flex-direction: column;
-
-					.link {
-						color: rgb(61, 61, 61);
-						font-size: 1rem;
-						font-weight: 500;
+					list-style: none;
+					li {
 						margin: 5px 0;
+						a {
+							color: rgb(61, 61, 61);
+							font-size: 1rem;
+							font-weight: 500;
+						}
 					}
 				}
 			}
@@ -139,7 +141,7 @@ footer {
 					text-align: center;
 					.link-column {
 						margin: 10px 0;
-						.link {
+						a {
 							font-size: 1rem;
 						}
 					}

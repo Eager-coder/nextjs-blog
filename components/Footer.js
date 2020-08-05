@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NavLink from './NavLink'
 import '../styles/css/Footer.css'
 function Footer() {
 	return (
@@ -9,40 +9,27 @@ function Footer() {
 						<span>EduPro</span>
 					</div>
 					<div className='links'>
-						<div className='link-column'>
+						<ul className='link-column'>
 							<span className='column-name'>Articles</span>
-							<Link href='/category/[category]' as='/category/education' passHref>
-								<a className='link'>Education</a>
-							</Link>
-							<Link href='/category/[category]' as='/category/hobby' passHref>
-								<a className='link'>Hobby</a>
-							</Link>
-							<Link href='/category/[category]' as='/category/entertainment' passHref>
-								<a className='link'>Entertainment</a>
-							</Link>
-							<Link href='/category/[category]' as='/category/business' passHref>
-								<a className='link'>Business</a>
-							</Link>
-							<Link href='/category/[category]' as='/category/lifestyle' passHref>
-								<a className='link'>Lifestyle</a>
-							</Link>
-							<Link href='/category/[category]' as='/category/tech' passHref>
-								<a className='link'>Tech</a>
-							</Link>
-						</div>
-						<div className='link-column'>
+							<NavLink href='/category/[category]' as='/category/education' text='Education' />
+							<NavLink href='/category/[category]' as='/category/hobby' text='Hobby' />
+							<NavLink
+								href='/category/[category]'
+								as='/category/entertainment'
+								text='Entertainment'
+							/>
+							<NavLink href='/category/[category]' as='/category/lifestyle' text='Lifestyle' />
+							<NavLink href='/category/[category]' as='/category/business' text='Business' />
+							<NavLink href='/category/[category]' as='/category/tech' text='Tech' />
+						</ul>
+						<ul className='link-column'>
 							<span className='column-name'>WE ARE</span>
-							<Link href='/about' passHref>
-								<a className='link'>About</a>
-							</Link>
-							<Link href='/about' passHref>
-								<a className='link'>Our team</a>
-							</Link>
-							<Link href='/about' passHref>
-								<a className='link'>Support us</a>
-							</Link>
-						</div>
+							<NavLink href='/about' text='About' passHref />
+							<NavLink href='/about' text='Our team' passHref />
+							<NavLink href='/about' text='Support us' passHref />
+						</ul>
 					</div>
+
 					<div className='social-media'>
 						<span className='column-name'>Follow us</span>
 						<div className='meida-links'>
